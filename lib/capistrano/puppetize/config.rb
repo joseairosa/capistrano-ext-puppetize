@@ -36,7 +36,6 @@ FILESERVER
         <<P_APPLY
 #!/bin/sh
 #{@facts.join(" ")} puppet apply \\
- --modulepath=#{all_module_paths.join(':')} \\
  --templatedir=#{@puppet_root}/templates \\
  --fileserverconfig=#{@puppet_root}/fileserver.conf \\
  #{@puppet_root}/manifests/site.pp
